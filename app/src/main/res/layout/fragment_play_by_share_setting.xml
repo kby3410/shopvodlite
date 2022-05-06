@@ -1,0 +1,192 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:mContext="com.ayst.adplayer.settings.PlayByShareSettingFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.ayst.adplayer.view.XianHeiFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/share_play_setting"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_big_big" />
+
+        <com.ayst.adplayer.view.XianHeiFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/share_play_setting_intro"
+            android:textColor="@color/white_70"
+            android:textSize="@dimen/font_normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp">
+
+            <ImageButton
+                android:visibility="gone"
+                android:id="@+id/btn_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:focusable="true"
+                android:padding="5dp"
+                android:background="@drawable/bg_circle_selector"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_back_normal"/>
+
+            <com.ayst.adplayer.view.XianHeiFontTextView
+                android:id="@+id/tv_cur_dir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="smb://"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="5dp"
+            android:background="@color/white_30" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/host_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <Button
+                    style="@style/Button"
+                    android:id="@+id/btn_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/add" />
+
+                <com.andexert.expandablelayout.library.ExpandableLayoutListView xmlns:expandable="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/lv_host"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"/>
+
+            </LinearLayout>
+
+            <ListView
+                android:visibility="gone"
+                android:id="@+id/lv_dir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:id="@+id/edit_container"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:visibility="invisible">
+
+                <EditText
+                    android:id="@+id/edt_host_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:hint="@string/ip_hint"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_normal"
+                    android:nextFocusDown="@+id/btn_need_password"
+                    android:digits="0123456789."/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp">
+
+                    <com.ayst.adplayer.view.XianHeiFontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/need_password"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_normal"/>
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:id="@+id/btn_need_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:checked="true"
+                        android:background="@drawable/bg_common_selector"
+                        android:nextFocusUp="@+id/edt_host_address"
+                        android:nextFocusDown="@+id/edt_user_name"/>
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/edt_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:hint="@string/username_hint"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_normal"
+                    android:nextFocusUp="@+id/btn_need_password"/>
+
+                <EditText
+                    android:id="@+id/edt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:hint="@string/password_hint"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_normal"
+                    android:inputType="textPassword"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal">
+
+                    <Button
+                        style="@style/Button.Red"
+                        android:id="@+id/btn_cancel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/cancel"/>
+
+                    <Button
+                        style="@style/Button"
+                        android:id="@+id/btn_save"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="40dp"
+                        android:text="@string/save"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

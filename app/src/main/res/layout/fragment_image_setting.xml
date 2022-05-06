@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:mContext="com.ayst.adplayer.settings.CopySettingFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.ayst.adplayer.view.XianHeiFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_setting"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_big_big" />
+
+        <com.ayst.adplayer.view.XianHeiFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/image_setting_intro"
+            android:textColor="@color/white_70"
+            android:textSize="@dimen/font_normal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="20dp"
+            android:background="@color/white_30" />
+
+        <RelativeLayout
+            android:id="@+id/set_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/bg_common_selector"
+            android:clickable="true"
+            android:focusable="true">
+
+            <com.ayst.adplayer.view.XianHeiFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/image_play_interval"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal" />
+
+            <ImageView
+                android:id="@+id/iv_duration"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_right" />
+
+            <com.ayst.adplayer.view.XianHeiFontTextView
+                android:id="@+id/tv_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_toStartOf="@+id/iv_duration"
+                android:text="5"
+                android:textColor="@color/white_70"
+                android:textSize="@dimen/font_normal" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/set_effect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/bg_common_selector"
+            android:clickable="true"
+            android:focusable="true">
+
+            <com.ayst.adplayer.view.XianHeiFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/image_play_effect"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal" />
+
+            <ImageView
+                android:id="@+id/iv_effect"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_right" />
+
+            <com.ayst.adplayer.view.XianHeiFontTextView
+                android:id="@+id/tv_effect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_toStartOf="@+id/iv_effect"
+                android:text="@string/tv_effect"
+                android:textColor="@color/white_70"
+                android:textSize="@dimen/font_normal" />
+
+        </RelativeLayout>
+
+        <com.andexert.expandablelayout.library.ExpandableLayout
+            xmlns:expandable="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/set_music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            expandable:el_headerLayout="@layout/music_item_header"
+            expandable:el_contentLayout="@layout/music_item_content"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

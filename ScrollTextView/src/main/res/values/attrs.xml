@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ScrollText">
+        <attr name="st_orientation" format="string" />
+        <attr name="st_speed" format="integer" />
+        <attr name="st_text" format="string" />
+        <attr name="st_textColor" format="color" />
+        <attr name="st_textSize" format="dimension" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="@dimen/edit_dialog_sub_width"
+        android:layout_height="@dimen/edit_dialog_height"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/black_50" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.ayst.adplayer.view.XianHeiFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/text_size"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small" />
+
+            <Spinner
+                android:id="@+id/spn_text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_spinner_selector"
+                android:entries="@array/text_size"
+                android:focusable="true"
+                android:spinnerMode="dropdown" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/black_50" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <com.ayst.adplayer.view.XianHeiFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/text_style"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small" />
+
+            <Spinner
+                android:id="@+id/spn_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_spinner_selector"
+                android:focusable="true"
+                android:spinnerMode="dropdown" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/black_50" />
+
+        <com.ayst.adplayer.view.XianHeiFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/text_color"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_small" />
+
+        <include
+            layout="@layout/layout_text_color_pick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/black_50"
+            android:layout_margin="2dp" />
+
+        <com.ayst.adplayer.view.XianHeiFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/bg_color"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_small" />
+
+        <include
+            layout="@layout/layout_text_bg_color_pick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/black_50"
+            android:layout_margin="2dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/black_50" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.ayst.adplayer.view.XianHeiFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/scroll_speed"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small" />
+
+            <Spinner
+                android:id="@+id/spn_scroll_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_spinner_selector"
+                android:entries="@array/scroll_speed"
+                android:focusable="true"
+                android:spinnerMode="dropdown" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

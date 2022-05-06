@@ -1,0 +1,175 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.ayst.adplaer"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode
+        versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\user\\rk3229.jks')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+    }
+
+    buildTypes {
+        release {
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    def fileName = "Adplayer_${variant.buildType.name}_v${variant.versionName}_${releaseTime()}.apk"
+                    outputFileName = fileName
+                }
+            }
+        }
+
+        
+    }
+    compileOptions {
+
+        sourceCompatibility JavaVersion.VERSION_1_8
+
+        targetCompatibility JavaVersion.VERSION_1_8
+
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+//    compile project(':vitamio')
+    compile project(':ScrollTextView')
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.android.support:support-v4:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    implementation 'com.github.traex.expandablelayout:library:1.3'
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    implementation 'com.kyleduo.switchbutton:library:1.4.6'
+    implementation 'cn.trinea.android.common:trinea-android-common:4.2.15'
+    implementation 'com.wdullaer:materialdatetimepicker:3.5.1'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation('com.squareup.retrofit2:converter-gson:2.3.0')
+
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation 'com.github.bumptech.glide:glide:+'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+
+    implementation 'jcifs:jcifs:1.3.17'
+//    implementation 'com.nanohttpd:nanohttpd:2.1.1'
+    implementation 'com.google.guava:guava:18.0'
+
+    implementation 'commons-lang:commons-lang:2.6'
+
+    implementation 'com.github.sososeen09:MultiTypeJsonParser:0.1.3'
+}
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+updateVersion()
+
+def updateVersion() {
+    def propertiesFile = file('build.properties')
+    Properties properties = readProperties(propertiesFile)
+
+    def versionMajor = properties['version_major'].toString().toInteger()
+    def versionMinor = properties['version_minor'].toString().toInteger()
+    def versionPatch = properties['version_patch'].toString().toInteger()
+    def versionBuild = properties['version_build'].toString().toInteger()
+    def versionStore = properties['version_store'].toString().toInteger()
+
+    if (isReleaseTask()) {
+        System.out.println(">>> Building Release...")
+        versionPatch++
+        versionStore++
+        versionBuild = 0
+        properties['version_patch'] = versionPatch.toString()
+        properties['version_store'] = versionStore.toString()
+        properties['version_build'] = versionBuild.toString()
+        writeProperties(propertiesFile, properties)
+    }
+    if (isCompileTask()) {
+        System.out.println(">>> Compiling Source...")
+        versionBuild++
+        properties['version_build'] = versionBuild.toString()
+        writeProperties(propertiesFile, properties)
+    }
+
+    def versionName = "${versionMajor}.${versionMinor}.${versionPatch}"
+    def applicationId = android.defaultConfig.applicationId
+    if (!isReleaseTask()) {
+        versionName = versionName + ".${versionBuild}"
+        applicationId = applicationId + android.buildTypes.debug.applicationIdSuffix
+    }
+    System.out.println(">>> " + project.parent.name + " " + versionName + " (" + versionStore + ") '" + applicationId + "'")
+    android.defaultConfig.versionCode = versionStore
+    android.defaultConfig.versionName = versionName
+}
+
+def isCompileTask() {
+    def tasks = gradle.getStartParameter().getTaskNames()
+    return ':app:generateDebugSources' in tasks || ':app:generateReleaseSources' in tasks ||
+            'generateDebugSources' in tasks || 'generateReleaseSources' in tasks
+}
+
+def isReleaseTask() {
+    def tasks = gradle.getStartParameter().getTaskNames()
+    return ':app:assembleRelease' in tasks || 'assembleRelease' in tasks
+}
+
+static Properties readProperties(propertiesFile) {
+    if (propertiesFile.canRead()) {
+        Properties properties = new Properties()
+        def inputStream = new FileInputStream(propertiesFile)
+        properties.load(inputStream)
+        inputStream.close()
+        return properties
+    } else {
+        def message = ">>> Could not read " + propertiesFile.name + " file!"
+        System.err.println(message)
+        throw new GradleException(message)
+    }
+}
+
+def static writeProperties(propertiesFile, properties) {
+    def writer = propertiesFile.newWriter()
+    properties.store(writer, "Build Properties")
+    writer.close()
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '28.0.3'
+            }
+        }
+    }
+}
+

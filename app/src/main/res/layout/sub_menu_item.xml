@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_list_item_selector">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/menu_padding"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <com.ayst.adplayer.view.XianHeiFontTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/play_setting"
+            android:textColor="@drawable/action_text_color_selector"
+            android:textSize="@dimen/font_normal"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+</LinearLayout>

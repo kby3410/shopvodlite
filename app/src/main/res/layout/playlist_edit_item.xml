@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@drawable/bg_common_selector"
+    android:padding="5dp">
+
+    <com.ayst.adplayer.view.XianHeiFontTextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:ellipsize="start"
+        android:text="@string/file"
+        android:textColor="@drawable/action_text_color_selector"
+        android:textSize="@dimen/font_normal" />
+
+    <ImageButton
+        android:id="@+id/btn_up"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:padding="5dp"
+        android:background="@drawable/bg_circle_selector"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_up"
+        android:checked="true" />
+
+    <ImageButton
+        android:id="@+id/btn_down"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:padding="5dp"
+        android:background="@drawable/bg_circle_selector"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_down"
+        android:checked="true" />
+
+    <ImageButton
+        android:id="@+id/btn_delete"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:padding="5dp"
+        android:background="@drawable/bg_circle_selector"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_delete"
+        android:checked="true" />
+
+</LinearLayout>

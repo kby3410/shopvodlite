@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/item_image"/>
+
+    <com.ayst.adplayer.view.XianHeiFontTextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_common_selector"
+        android:focusable="true"
+        android:clickable="true"
+        android:text="@string/dir"
+        android:textColor="@drawable/action_text_color_selector"
+        android:textSize="@dimen/font_normal" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/bg_circle_selector"
+        android:checked="false"
+        android:focusable="true" />
+
+</LinearLayout>

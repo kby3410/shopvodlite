@@ -1,0 +1,104 @@
+<resources tools:ignore="MissingTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Shopvod lite</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--EditTextBoxDialog-->
+    <string name="input_hint">Please enter text here.</string>
+    <string name="text_size">Text Size</string>
+    <string name="text_style">Text Style</string>
+    <string name="text_color">Text Color</string>
+    <string name="bg_color">Background Color</string>
+    <string name="scroll_speed">Scroll Speed</string>
+
+    <!--Setting-->
+    <string name="ip_hint">Please enter the IP address</string>
+    <string name="ip_invalid">IP address is invalid, please re-enter</string>
+    <string name="username_hint">Please enter user name</string>
+    <string name="password_hint">Please enter password</string>
+    <string name="need_password">Do you need a password?</string>
+    <string name="host_connect_failed">Host connection failed: </string>
+    <string name="url_invalid">Url address is invalid, please re-enter</string>
+
+    <string name="play_setting">Play</string>
+    <string name="image_setting">Image</string>
+    <string name="template_setting">Template</string>
+    <string name="timing_setting">Power Manager</string>
+    <string name="copy_setting">Copy</string>
+    <string name="about">About</string>
+    <string name="file">File</string>
+    <string name="product_module">Device Name:</string>
+    <string name="product_sn">Serial Number:</string>
+    <string name="app_version">App Version:</string>
+    <string name="system_version">System Version:</string>
+    <string name="android_version">Android Version:</string>
+    <string name="wifi_mac">Wifi MAC:</string>
+    <string name="check_update">Check Update</string>
+    <string name="dir">Folder</string>
+    <string name="playlist">Playlist</string>
+    <string name="open">Open</string>
+    <string name="tv_power_manager">Power Switch</string>
+    <string name="timing_power_on">Power On</string>
+    <string name="timing_power_off">Power Off</string>
+    <string name="timing_reboot">Rebooting</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="image_play_interval">Image play time</string>
+    <string name="image_play_effect">Effect</string>
+    <string name="image_play_audio">BGM</string>
+    <string name="nothing">None</string>
+    <string name="dir_play_setting">By Folder</string>
+    <string name="list_play_setting">By Playlist</string>
+    <string name="plan_play_setting">By Scheduling</string>
+    <string name="share_play_setting">By Shared</string>
+    <string name="http_play_setting">By Streaming</string>
+    <string name="dir_play_setting_intro">Playing automatically the video and image files in the specified folder.</string>
+    <string name="list_play_setting_intro">Creating the playlists by ordering video and image files.</string>
+    <string name="plan_play_setting_intro">Scheduling the playlist time.</string>
+    <string name="share_play_setting_intro">Select a directory on the shared host that contains pictures or videos, and the video and pictures on the shared host will be automatically played next time. If there is no shared host, press the [Add] button to add a shared host first.</string>
+    <string name="http_play_setting_intro">Select an online playlist and the next time it automatically plays the videos and pictures specified in the list. If there is no online playlist, press the [Add] button to add an online playlist first.</string>
+    <string name="add">Add</string>
+    <string name="add_file">Add the file</string>
+    <string name="add_url">Add the url</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="plan">Schedule</string>
+    <string name="add_playlist">Add the playlist</string>
+    <string name="file_picker_title">Choose the file</string>
+    <string name="url_picker_title">Enter a video link</string>
+    <string name="finish">Done</string>
+    <string name="playlist_picker_title">Choose the playlist</string>
+    <string name="sec">Sec</string>
+    <string name="no_video_tips">No availiable files!!</string>
+    <string name="no_video_confirm">No availiable files on the folder.</string>
+    <string name="ok">OK</string>
+    <string name="effect_picker_title">Effect Setting</string>
+    <string name="exit_dialog_title">Do you want to quit？</string>
+    <string name="duration_dialog_title">Image play time Setting</string>
+    <string name="copy_setting_intro">If the USB root has the files with "copy.txt", copy to the interal memory root.</string>
+    <string name="timing_setting_intro">Power On/Off and Rebooting time setting.</string>
+    <string name="image_setting_intro">Image play time, Effect, BGM setting.</string>
+    <string name="template_setting_intro">Select the template displayed on the home page, or import the template through the USB flash drive.</string>
+
+    <string name="downloading">downloading...</string>
+    <string name="upgrade_to">upgrade to </string>
+    <string name="newest">Already the latest version</string>
+    <string name="upgrade_tips">Find new version, prepare to upgrade, reboot automatically after upgrade completes, do not power off！</string>
+
+    <string name="http_playlist_name_by_config">From U-Disk</string>
+    <string name="playlist_used">This playlist is being used for the program, please delete the corresponding play plan before trying again!</string>
+
+    <string name="tv_effect">Default</string>
+
+    <!--PlayerFragment-->
+    <string name="save_as_template">Save template as</string>
+    <string name="save_as_template_hint">Enter a template name</string>
+
+    <!--Config-->
+    <string name="found_config_file_tips">"Find configuration file, prepare to configure, please don't power off..."</string>
+    <string name="found_template_file_tips">"Find template file, prepare to configure, please don't power off..."</string>
+    <string name="config_complete">Configured successfully</string>
+    <string name="config_template_complete">Configured template successfully</string>
+    <string name="config_template_failed">Configured template failed</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--字体-->
+    <dimen name="font_small_small">16sp</dimen>
+    <dimen name="font_small">18sp</dimen>
+    <dimen name="font_normal">20sp</dimen>
+    <dimen name="font_big">28sp</dimen>
+    <dimen name="font_big_big">36sp</dimen>
+    <dimen name="font_big_bold">40sp</dimen>
+
+    <dimen name="setting_content_width">500dp</dimen>
+    <dimen name="setting_content_height">600dp</dimen>
+    <dimen name="setting_header_sub_menu_width">170dp</dimen>
+
+    <dimen name="activity_horizontal_margin">30dp</dimen>
+    <dimen name="activity_vertical_margin">20dp</dimen>
+
+    <dimen name="edit_dialog_main_width">500dp</dimen>
+    <dimen name="edit_dialog_sub_width">300dp</dimen>
+    <dimen name="edit_dialog_height">500dp</dimen>
+    <dimen name="image_item_width">166dp</dimen>
+    <dimen name="image_item_height">166dp</dimen>
+</resources>

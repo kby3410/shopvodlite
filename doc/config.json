@@ -1,0 +1,9 @@
+{
+  "deleteAll": 1,
+  "copyAll": 1,
+  "deleteFiles": ["/sdcard/Movies/001.mp4", "/sdcard/Movies/002.mp4", "/sdcard/Movies/003.mp4"],
+  "copyFiles": ["004.mp4", "005.mp4", "006.mp4"],
+  "onlineVideos": [{"name":"在线播放列表1", "urls":["http://xxx/xxx.m3u8", "http://xxx/xxx.m3u8", "http://xxx/xxx.m3u8"]},
+                   {"name":"在线播放列表2", "urls":["http://xxx/xxx.m3u8", "http://xxx/xxx.m3u8", "http://xxx/xxx.m3u8"]},
+                   {"name":"在线播放列表3", "urls":["http://xxx/xxx.m3u8", "http://xxx/xxx.m3u8", "http://xxx/xxx.m3u8"]},]
+}

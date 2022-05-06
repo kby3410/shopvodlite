@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">Shopvod lite</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--EditTextBoxDialog-->
+    <string name="input_hint">请在这里输入文本</string>
+    <string name="text_size">字体大小</string>
+    <string name="text_style">字体样式</string>
+    <string name="text_color">字体颜色</string>
+    <string name="bg_color">背景颜色</string>
+    <string name="scroll_speed">滚动速度</string>
+
+    <!--Setting-->
+    <string name="ip_hint">请输入IP地址</string>
+    <string name="ip_invalid">IP地址无效，请重新输入</string>
+    <string name="username_hint">请输入用户名</string>
+    <string name="password_hint">请输入密码</string>
+    <string name="need_password">是否需要密码</string>
+    <string name="host_connect_failed">主机连接失败: </string>
+    <string name="url_invalid">Url地址无效，请重新输入</string>
+
+    <string name="play_setting">播放设置</string>
+    <string name="image_setting">图片设置</string>
+    <string name="template_setting">模板设置</string>
+    <string name="timing_setting">电源管理</string>
+    <string name="copy_setting">自动拷贝</string>
+    <string name="about">关于</string>
+    <string name="file">文件</string>
+    <string name="product_module">产品型号:</string>
+    <string name="product_sn">设备序列号:</string>
+    <string name="app_version">应用版本号:</string>
+    <string name="system_version">系统版本号:</string>
+    <string name="android_version">Android版本号:</string>
+    <string name="wifi_mac">MAC地址:</string>
+    <string name="check_update">检查更新</string>
+    <string name="dir">目录</string>
+    <string name="playlist">播放列表</string>
+    <string name="open">打开</string>
+    <string name="tv_power_manager">定时开关机</string>
+    <string name="timing_power_on">定时开机</string>
+    <string name="timing_power_off">定时关机</string>
+    <string name="timing_reboot">定时重启</string>
+    <string name="edit">编辑</string>
+    <string name="delete">删除</string>
+    <string name="image_play_interval">播放间隔</string>
+    <string name="image_play_effect">播放效果</string>
+    <string name="image_play_audio">背景音乐</string>
+    <string name="nothing">无</string>
+    <string name="dir_play_setting">目录播放</string>
+    <string name="list_play_setting">列表播放</string>
+    <string name="plan_play_setting">时段播放</string>
+    <string name="share_play_setting">共享播放</string>
+    <string name="http_play_setting">在线播放</string>
+    <string name="dir_play_setting_intro">选择一个包含图片或视频的目录，下次将自动搜索该目录下视频或图片播放。</string>
+    <string name="list_play_setting_intro">选择一个播放列表，下次将自动按该列表指定的视频和图片播放。如果没有播放列表，请按【添加】按钮先添加一个播放列表。</string>
+    <string name="plan_play_setting_intro">选择一个时段计划，下次将自动按该时段计划播放列表指定的视频和图片。如果没有时段计划，请按【添加】按钮先添加一个时段计划。</string>
+    <string name="share_play_setting_intro">选择共享主机中某个包含图片或视频的目录，下次将自动播放共享主机上的视频和图片。如果没有共享主机，请按【添加】按钮先添加一个共享主机。</string>
+    <string name="http_play_setting_intro">选择一个在线播放列表，下次将自动按该列表指定的视频和图片播放。如果没有在线播放列表，请按【添加】按钮先添加一个在线播放列表。</string>
+    <string name="add">添加</string>
+    <string name="add_file">添加文件</string>
+    <string name="add_url">添加视频链接</string>
+    <string name="cancel">取消</string>
+    <string name="save">保存</string>
+    <string name="plan">计划</string>
+    <string name="add_playlist">添加播放列表</string>
+    <string name="file_picker_title">请选择文件</string>
+    <string name="url_picker_title">请输入一个视频链接</string>
+    <string name="finish">完成</string>
+    <string name="playlist_picker_title">请选择播放列表</string>
+    <string name="sec">秒</string>
+    <string name="no_video_tips">没有找到任何视频或图片，请修改播放设置</string>
+    <string name="no_video_confirm">该目录下无任何视频或图片，依然选择该目录吗？</string>
+    <string name="ok">确定</string>
+    <string name="effect_picker_title">请选择图片播放效果</string>
+    <string name="exit_dialog_title">确定要退出广告播放吗？</string>
+    <string name="duration_dialog_title">请选择图片播放时长</string>
+    <string name="copy_setting_intro">插入U盘时，检测U盘里边是否有指定拷贝功能的文档（如copy.txt）和视频文件，如果有，则删除本地根目录的视频，复制U盘根目录下的视频文件到本地，反之则不进行任何操作。</string>
+    <string name="timing_setting_intro">打开定时开关机功能，并设置好开关机时间，设备将按您设定的时间工作，兼顾展示效果与节能。</string>
+    <string name="image_setting_intro">当待播放内容包含图片时，在这里可以设置图片播放时长、效果、背景音乐。</string>
+    <string name="template_setting_intro">选择主页上显示的模板，或通过USB闪存驱动器导入模板。</string>
+
+    <string name="downloading">正在下载...</string>
+    <string name="upgrade_to">更新至</string>
+    <string name="newest">已是最新版本</string>
+    <string name="upgrade_tips">发现新版本，准备升级，升级完成会自动重启，请勿断电！</string>
+
+    <string name="http_playlist_name_by_config">来自U盘</string>
+    <string name="playlist_used">此播放列表正在被播放计划使用，请先删除对应的播放计划再试！</string>
+
+    <!--PlayerFragment-->
+    <string name="save_as_template">模板另存为</string>
+    <string name="save_as_template_hint">请输入模板名称</string>
+
+    <!--Config-->
+    <string name="found_config_file_tips">发现配置文件，准备开始配置，请勿断电...</string>
+    <string name="config_complete">完成配置！</string>
+    <string name="found_template_file_tips">发现模板文件，准备开始配置，请勿断电...</string>
+    <string name="config_template_complete">完成模板配置！</string>
+    <string name="config_template_failed">模板配置失败！</string>
+
+</resources>

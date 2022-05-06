@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:mContext="com.ayst.adplayer.settings.AboutFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <com.ayst.adplayer.view.XianHeiFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_big_big" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_logo"
+            android:layout_marginTop="30dp"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <com.ayst.adplayer.view.XianHeiFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/product_module"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal"/>
+
+            <com.ayst.adplayer.view.XianHeiFontTextView
+                android:id="@+id/tv_module"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="adplayer"
+                android:textColor="@color/white_70"
+                android:textSize="@dimen/font_normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <com.ayst.adplayer.view.XianHeiFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/product_sn"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal"/>
+
+            <com.ayst.adplayer.view.XianHeiFontTextView
+                android:id="@+id/tv_sn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="DH7KDJ8239JKKQA"
+                android:textColor="@color/white_70"
+                android:textSize="@dimen/font_normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <com.ayst.adplayer.view.XianHeiFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_version"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal"/>
+
+            <com.ayst.adplayer.view.XianHeiFontTextView
+                android:id="@+id/tv_app_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="1.0"
+                android:textColor="@color/white_70"
+                android:textSize="@dimen/font_normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <com.ayst.adplayer.view.XianHeiFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/system_version"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal"/>
+
+            <com.ayst.adplayer.view.XianHeiFontTextView
+                android:id="@+id/tv_sys_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="1.0"
+                android:textColor="@color/white_70"
+                android:textSize="@dimen/font_normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <com.ayst.adplayer.view.XianHeiFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/android_version"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal"/>
+
+            <com.ayst.adplayer.view.XianHeiFontTextView
+                android:id="@+id/tv_android_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="1.0"
+                android:textColor="@color/white_70"
+                android:textSize="@dimen/font_normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <com.ayst.adplayer.view.XianHeiFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wifi_mac"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal"/>
+
+            <com.ayst.adplayer.view.XianHeiFontTextView
+                android:id="@+id/tv_mac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="unknown"
+                android:textColor="@color/white_70"
+                android:textSize="@dimen/font_normal"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_check_update"
+            style="@style/Button"
+            android:layout_marginTop="20dp"
+            android:text="@string/check_update" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:text="Copyright . All rights reserved by ShopVOD"
+        android:textSize="@dimen/font_small_small"
+        android:textColor="@color/white_50"/>
+
+</RelativeLayout>

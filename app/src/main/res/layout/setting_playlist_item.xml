@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_common_selector"
+    android:padding="5dp">
+
+    <com.andexert.expandablelayout.library.ExpandableLayoutItem
+        xmlns:expandable="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/expanded_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        expandable:el_headerLayout="@layout/playlist_item_header"
+        expandable:el_contentLayout="@layout/playlist_item_content"/>
+
+</RelativeLayout>

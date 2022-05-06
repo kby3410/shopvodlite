@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RadioGroup
+        android:id="@+id/group_text_bg_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rdo_color_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_11_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_12_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_13_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_21_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_22_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_23_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_31_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_32_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_33_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_41_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_42_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_43_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_51_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_52"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_52_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_53"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_53_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_61"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_61_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_62"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_62_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_63"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_63_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_71"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_71_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_72"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_72_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_73"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_73_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_74"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_74_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_75"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_75_selector" />
+
+        <RadioButton
+            android:id="@+id/rdo_color_76"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_76_selector" />
+    </RadioGroup>
+</HorizontalScrollView>
