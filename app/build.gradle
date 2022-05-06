@@ -68,7 +68,7 @@ dependencies {
     implementation 'com.kyleduo.switchbutton:library:1.4.6'
     implementation 'cn.trinea.android.common:trinea-android-common:4.2.15'
     implementation 'com.wdullaer:materialdatetimepicker:3.5.1'
-
+    implementation 'org.jsoup:jsoup:1.13.1'
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
     implementation('com.squareup.retrofit2:converter-gson:2.3.0')
 
