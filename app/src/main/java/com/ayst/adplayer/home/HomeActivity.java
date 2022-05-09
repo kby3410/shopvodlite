@@ -253,6 +253,10 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();
                         //finish();
+                      //  finishAffinity();
+                      //  System.runFinalization();
+                       // System.exit(0);
+                        // 종료
                         finishAffinity();
                         System.runFinalization();
                         System.exit(0);

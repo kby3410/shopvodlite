@@ -3,9 +3,6 @@ package com.ayst.adplayer.settings;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -20,8 +17,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
-
-import androidx.appcompat.widget.AppCompatButton;
 
 import com.ayst.adplayer.R;
 import com.ayst.adplayer.common.BaseFragment;
@@ -77,8 +72,8 @@ public class AboutFragment extends BaseFragment {
 
     private boolean canUpgrade = false;
     private AppUpgradeManager mUpgradeManager = null;
-    private String UpdateUrl = "file:///C:/pull/test.html";
-    private String Shopvodlite_Url = "file:///C:/pull/test.html";
+    private String UpdateUrl = "http://krizer.co.kr/krizer_edit/krizer_app_version.html";
+    private String Shopvodlite_Url = "http://krizer.co.kr/krizer_edit/adplayer.apk";
     private String TAG = "AboutFragment" ;
     private String App_Version = "2.3.15.3";
     private String Server_Version;
@@ -112,7 +107,7 @@ public class AboutFragment extends BaseFragment {
         mAndroidVersionTv.setText(AppUtils.getProperty("ro.build.version.release", "5.1"));
         mAppVersionTv.setText(AppUtils.getVersionName(mContext));
         mMacTv.setText(AppUtils.getWifiMacAddr(mContext));
-        targetFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath()+"/TEST/" + filename);
+        targetFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + filename);
 
         mCheckUpdateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,17 +119,9 @@ public class AboutFragment extends BaseFragment {
                     */
                 JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
                 jsoupAsyncTask.execute(UpdateUrl);
-                Log.d(TAG,"Server version = "+Server_Version);
+                Log.d(TAG,"App version = "+App_Version);
 
-                if(App_Version.equals(Server_Version)) {
-                    Toast.makeText(mContext, R.string.newest, Toast.LENGTH_SHORT).show();
-                }else{
-                    if(InternetCheck()){
-                        CheckVer();
-                    }else {
-                        Toast.makeText(mContext, "네트워크 연결을 확인해주세요.", Toast.LENGTH_SHORT).show();
-                    }
-                }
+
             }
         });
 
@@ -180,18 +167,29 @@ public class AboutFragment extends BaseFragment {
                 Log.e(TAG, callUrl);
                 Document doc = Jsoup.connect(callUrl).get();
                 // 위의 html tag에서 결과숫자를 싸고 있는 span tag 을 class명을 이용함.
-                Elements links = doc.select(".version");
+                Elements links = doc.select(".Shopvod_lite_version");
                 Log.e(TAG, "links=" + links.size());
 
                 for(Element el : links) {
-                   Server_Version = el.text();
+                    Log.e(TAG, el.text()) ;
+                    Server_Version = el.text() ;
                 }
             } catch (IOException e) {
                 e.printStackTrace();
             } return null;
         }
         @Override protected void onPostExecute(Void result) {
-
+            if(App_Version.equals(Server_Version)) {
+                Log.d(TAG,"Server version = "+Server_Version);
+                Toast.makeText(mContext, R.string.newest, Toast.LENGTH_SHORT).show();
+            }else{
+                Log.d(TAG,"else Server version = "+Server_Version);
+                if(InternetCheck()){
+                        CheckVer();
+                }else {
+                    Toast.makeText(mContext, "네트워크 연결을 확인해주세요.", Toast.LENGTH_SHORT).show();
+                }
+            }
         }
     }
 
@@ -199,7 +197,6 @@ public class AboutFragment extends BaseFragment {
     void CheckVer() {
         new Thread() {
             public void run() {
-                while (running) {
                     try {
                         URL url;
                         HttpURLConnection conn = null;
@@ -207,7 +204,7 @@ public class AboutFragment extends BaseFragment {
                         conn = (HttpURLConnection) url.openConnection();
                         AppListIntent = new Intent(Intent.ACTION_MAIN, null);
                         AppListIntent.addCategory(Intent.CATEGORY_LAUNCHER);
-                        Runtime.getRuntime().exec("su");
+                       // Runtime.getRuntime().exec("su");
 
                         if (200 != conn.getResponseCode()) {
                             System.out.println("con test" + conn.getResponseCode());
@@ -230,7 +227,7 @@ public class AboutFragment extends BaseFragment {
                     } catch (IOException ioException) {
                         ioException.printStackTrace();
                     }
-                }
+
             }
         }.start();
     }
@@ -343,19 +340,19 @@ public class AboutFragment extends BaseFragment {
 
             if (Build.MODEL.equals("Infos_Duple")){
                 stdin.write(("busybox mount -o remount,rw -t ext4 /dev/block/platform/ff0f0000.dwmmc/by-name/system /system\n").getBytes()); // "Permissive"
-                stdin.write(("cp /storage/emulated/0/TEST/update.apk /system/app/ResponsiveWebview/ResponsiveWebview.apk\n").getBytes()); // E/[Error]: cp: /system/media/bootanimation_test.zip: Read-only file system
+                stdin.write(("cp /storage/emulated/0/update.apk /system/app/ResponsiveWebview/ResponsiveWebview.apk\n").getBytes()); // E/[Error]: cp: /system/media/bootanimation_test.zip: Read-only file system
                 stdin.write(("chmod 644 /system/app/ResponsiveWebview/ResponsiveWebview.apk\n").getBytes());
                 stdin.write(("reboot\n").getBytes());
                 Log.d(TAG, "Infos 제품입니다.");
             }else if(Build.MODEL.equals("minicube_X10")){
                 stdin.write(("mount -o rw,remount /system\n").getBytes()); // "Permissive"
-                stdin.write(("cp /storage/emulated/0/TEST/update.apk /system/app/Adplayer_release/Adplayer_release.apk\n").getBytes()); // E/[Error]: cp: /system/media/bootanimation_test.zip: Read-only file system
+                stdin.write(("cp /sdcard/update.apk /system/app/Adplayer_release/Adplayer_release.apk\n").getBytes()); // E/[Error]: cp: /system/media/bootanimation_test.zip: Read-only file system
                 stdin.write(("chmod 644 /system/app/Adplayer_release/Adplayer_release.apk\n").getBytes());
                 stdin.write(("reboot\n").getBytes());
                 Log.d(TAG, "minicube_x10 제품입니다.");
             }else if(Build.MODEL.equals("U4X+CM")){
                 stdin.write(("mount -o rw,remount /system\n").getBytes()); // "Permissive"
-                stdin.write(("cp /storage/emulated/0/TEST/update.apk /system/app/Adplayer_release/Adplayer_release.apk\n").getBytes()); // E/[Error]: cp: /system/media/bootanimation_test.zip: Read-only file system
+                stdin.write(("cp /sdcard/update.apk /system/app/Adplayer_release/Adplayer_release.apk\n").getBytes()); // E/[Error]: cp: /system/media/bootanimation_test.zip: Read-only file system
                 stdin.write(("chmod 644 /system/app/Adplayer_release/Adplayer_release.apk\n").getBytes());
                 stdin.write(("reboot\n").getBytes());
                 Log.d(TAG, "cm 제품입니다.");
